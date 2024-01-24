@@ -9,8 +9,8 @@ export default defineConfig({
   preload: {
     plugins: [externalizeDepsPlugin()],
     build: {
-      lib: {
-        entry: [resolve('src/preload/myindex.js')]
+      rollupOptions: {
+        input: [resolve('src/preload/myindex.js')]
       }
     }
   },
